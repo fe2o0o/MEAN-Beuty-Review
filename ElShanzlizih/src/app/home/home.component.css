@@ -1,0 +1,48 @@
+#bannar .row{
+  margin-top: 7rem;
+}
+.bannar{
+  background-color: #DAC0A3;
+  display: flex;
+  justify-content: center;
+  border-radius: 45% 45% 0 0;
+  -webkit-border-radius: 45% 45% 0 0;
+  -moz-border-radius: 45% 45% 0 0;
+  -ms-border-radius: 45% 45% 0 0;
+  -o-border-radius: 45% 45% 0 0;
+}
+
+
+
+.cart-item .cart{
+
+  background-color: #FEC195;
+  border-radius: 40% 0 40% 0;
+  -webkit-border-radius: 40% 0 40% 0;
+  -moz-border-radius: 40% 0 40% 0;
+  -ms-border-radius: 40% 0 40% 0;
+  -o-border-radius: 40% 0 40% 0;
+}
+
+.our-center{
+  padding: 30px 0;
+  background-image: url("../../assets/ourcenter.jpg");
+  background-size: cover;
+  background-position: top center;
+  background-attachment: fixed;
+}
+
+.center-list li i{
+  color: #deb687;
+}
+
+.need,
+.show-services{
+  padding: 80px 0;
+}
+
+
+.show-services .row .col-md-3
+{
+box-shadow: 0 0 10px #fec1958c
+}

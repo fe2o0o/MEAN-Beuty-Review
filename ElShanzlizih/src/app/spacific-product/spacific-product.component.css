@@ -1,0 +1,9 @@
+.comment{
+  padding: 20PX;
+  border: 2px solid #ac664a;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}

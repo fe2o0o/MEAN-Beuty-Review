@@ -1,0 +1,33 @@
+<nav id="nav"  class="navbar navbar-expand-lg   fixed-top bg-body py-3">
+  <div class="container ">
+    <h2 class="navbar-brand m-0 fw-bolder fs-4" href="#">EL_<span class="custom-color">SHANZLIZIH</span></h2>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav  ms-auto mb-2 mb-lg-0">
+        <li *ngIf="isLogged" class="nav-item">
+          <a class="nav-link" routerLink="home" routerLinkActive="custom-color">Home</a>
+        </li>
+        <li *ngIf="isLogged" class="nav-item">
+          <a class="nav-link" routerLink="about" routerLinkActive="custom-color">About</a>
+        </li>
+        <li *ngIf="isLogged" class="nav-item">
+          <a class="nav-link" routerLink="products" routerLinkActive="custom-color">Products</a>
+        </li>
+
+        <li *ngIf="isLogged" class="nav-item">
+          <a class="nav-link" routerLink="cart" routerLinkActive="custom-color">Cart</a>
+        </li>
+        <li *ngIf="isLogged" class="nav-item">
+          <a class="nav-link" routerLink="contact_us" routerLinkActive="custom-color">Contact Us</a>
+        </li>
+      </ul>
+      <div>
+        <button *ngIf="!isLogged" class="btn bg-custom fw-bold" routerLink="account" routerLinkActive="custom-color"> <i class="fa-solid fa-user"></i> Account</button>
+        <button *ngIf="isLogged" (click)="logOut()" class="btn btn-danger">LogOut</button>
+      </div>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,118 @@
+<section class="py-5 mt-5">
+  <div class="container">
+    <div class="row py-4 mb-5 justify-content-between align-items-center product">
+      <div class="img border-2 border rounded-2 shadow col-md-4">
+        <img class="w-100" [src]="spacificProduct?.image_path" alt="">
+      </div>
+      <div class="col-md-6 ">
+        <h2 class="custom-color">{{spacificProduct?.title}}</h2>
+        <p class="lead">
+          {{spacificProduct?.description}}
+        </p>
+        <p class="fs-3 text-success">{{spacificProduct?.price|currency:"EGP "}}</p>
+        <div class="mb-4">
+          <button (click)="incrementCount()" class="btn bg-custom">+</button>
+          <span class="p-2">{{count}}</span>
+          <button (click)="decrementCount()" class="btn bg-custom">-</button>
+        </div>
+          <div class="overflow-hidden mx-auto position-relative">
+            <button (click)="addToCart(spacificProduct?.id)" class="w-100">Add To Cart
+              <div class="star-1">
+                <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53"
+                  style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                  version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+                  <defs></defs>
+                  <g id="Layer_x0020_1">
+                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                    <path
+                      d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                      class="fil0"></path>
+                  </g>
+                </svg>
+              </div>
+              <div class="star-2">
+                <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53"
+                  style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                  version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+                  <defs></defs>
+                  <g id="Layer_x0020_1">
+                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                    <path
+                      d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                      class="fil0"></path>
+                  </g>
+                </svg>
+              </div>
+              <div class="star-3">
+                <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53"
+                  style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                  version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+                  <defs></defs>
+                  <g id="Layer_x0020_1">
+                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                    <path
+                      d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                      class="fil0"></path>
+                  </g>
+                </svg>
+              </div>
+              <div class="star-4">
+                <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53"
+                  style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                  version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+                  <defs></defs>
+                  <g id="Layer_x0020_1">
+                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                    <path
+                      d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                      class="fil0"></path>
+                  </g>
+                </svg>
+              </div>
+              <div class="star-5">
+                <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53"
+                  style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                  version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+                  <defs></defs>
+                  <g id="Layer_x0020_1">
+                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                    <path
+                      d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                      class="fil0"></path>
+                  </g>
+                </svg>
+              </div>
+              <div class="star-6">
+                <svg xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 784.11 815.53"
+                  style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                  version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+                  <defs></defs>
+                  <g id="Layer_x0020_1">
+                    <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                    <path
+                      d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z"
+                      class="fil0"></path>
+                  </g>
+                </svg>
+              </div>
+            </button>
+          </div>
+      </div>
+    </div>
+
+    <div class="reviews w-75 mx-auto">
+      <h2 class="custom-color mb-5">Reviews</h2>
+      <div class="mb-5">
+        <div *ngFor="let comment of spacificProduct?.comments" class="comment mb-3">
+          <p class="mb-1 custom-color">{{comment?.user?.name}}</p>
+          <p class="mb-1">
+            {{comment?.content}}
+        </div>
+      </div>
+      <div class="addComment position-relative ">
+        <input  [(ngModel)]="comment" class="form-control" type="text">
+        <button (click)="addComment(spacificProduct?.id)" [disabled]="comment.length == 0" class="btn bg-custom position-absolute top-0 end-0">Add comment</button>
+      </div>
+    </div>
+  </div>
+</section>

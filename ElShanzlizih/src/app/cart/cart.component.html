@@ -1,0 +1,61 @@
+<section class="py-5 mt-5">
+  <div  class="container">
+    <h1>Shooping Cart</h1>
+    <div *ngIf="productsData.length !=0 ;else notCart" class="row py-4">
+      <div class=" bg-body-tertiary align-self-baseline col-md-8 productsContainer pt-5">
+        <div *ngFor="let pro of productsData"  class="row mb-4 align-items-center ">
+          <div class="col-md-2">
+            <img [src]="pro?.product?.image_path" class="w-100" alt="">
+          </div>
+          <div class="col-md-8">
+            <h5>{{pro?.product?.title}}</h5>
+            <p>{{pro?.product?.description?.split(" ").slice(0,15).join(" ")}}</p>
+            <div class="mb-4">
+              <button (click)="incrementCount(quantity , pro?.product?.id)" class="btn bg-custom">+</button>
+              <span #quantity class="p-2">{{pro?.quantity}}</span>
+              <button (click)="decrementCount(quantity , pro?.product?.id)" class="btn bg-custom">-</button>
+            </div>
+            <h6>Price : {{pro?.product?.price | currency:' EGP '}}</h6>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 offset-md-1 bg-body-tertiary p-2">
+        <div class="p-3">
+          <h6 class="text-uppercase text-center fw-bolder mb-3">Estimate shipping and taxs</h6>
+          <div class="">
+            <div class="mb-3">
+              <label for="country" class="fw-bolder mb-2">Country </label>
+              <select name="Country" class="form-select" id="country">
+                <option value="Egypt" selected>Egypt</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="country" class="fw-bolder mb-2">City </label>
+              <select name="Country" class="form-select" id="country">
+                <option value="alex" selected>Alexandria</option>
+                <option value="cairo">Cairo</option>
+              </select>
+            </div>
+            <div class="my-4">
+              <h2 class="fw-bolder">Total</h2>
+              <h1 class="h3 fw-bolder text-main">{{totalPrice|currency:"EGP "}}</h1>
+            </div>
+            <button class="btn btn-success w-100 fw-bolder text-white mb-3">Cash
+              Order
+              <i class="fa-regular fa-money-bill-1"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ng-template #notCart>
+    <div class="text-center">
+      <h1 class="fw-bolder my-4">No Card Items To Display It</h1>
+      <button class="btn bg-main">
+        <a routerLink="/home" class="fs-4 fw-bolder text-white">Try Shopping Now</a>
+      </button>
+    </div>
+  </ng-template>
+</section>
+
